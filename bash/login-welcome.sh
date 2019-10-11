@@ -13,14 +13,16 @@
 # Variables   #
 ###############
 title="Overlord"
-myname="Richardson"
+myname=$USER
 hostname=$(hostname)
+date_time=$(date +"%H:%M %p")
+weekday=$(date +%A)
 
 ###############
 # Main        #
 ###############
-cat <<EOF
+#cat <<EOF
 
-Welcome to planet $hostname, "$title $myname!"
-
-EOF
+output="Welcome to planet $hostname, $title $myname! It is  $date_time on $weekday"
+cowsay -f elephant $output
+#EOF
